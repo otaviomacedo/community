@@ -17,8 +17,6 @@ class MyApplicationStack extends Stack {
   }
 }
 
-new MyApplicationStack(app, 'stackUnderTest');
-
 const integrationTestStack = new Stack(app, 'integrationTestStack');
 
 const withoutEncryption = new IntegTestCase(integrationTestStack, 'without-encryption', {
