@@ -1,0 +1,10 @@
+{
+  "version": "17.0.0",
+  "testCases": {
+    "without-encryption": {
+      "stacks": [
+        "without-encryption"
+      ]
+    }
+  }
+}
