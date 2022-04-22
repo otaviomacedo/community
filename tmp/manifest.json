@@ -1,0 +1,39 @@
+{
+  "version": "17.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "stackUnderTest": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "stackUnderTest.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/stackUnderTest/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Bucket83908E77",
+            "trace": [
+              "new Bucket (/Users/otaviom/projects/aws-cdk/packages/@aws-cdk/aws-s3/lib/bucket.js:670:26)",
+              "new MyApplicationStack (/Users/otaviom/projects/community/bin/integ.app.js:10:9)",
+              "Object.<anonymous> (/Users/otaviom/projects/community/bin/integ.app.js:15:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ]
+      },
+      "displayName": "stackUnderTest"
+    }
+  }
+}
